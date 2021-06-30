@@ -1,35 +1,24 @@
-import PropTypes from "prop-types";
+import React from "react";
 
-function ToDo({name}){
-  return <h1>I will study {name}</h1>
-}
-
-ToDo.propTypes={
-  name: PropTypes.string.isRequired
-};
-
-const whats=[
-  {
-    id: 1,
-    name: "ReactJs"
-  },
-  {
-    id: 2,
-    name: "React Native"
-  }, 
-  {
-    id: 3,
-    name: "Js"
-  }];
-
-function App() {
-  return (
-    <div className="App">
-      {whats.map(what=>(
-      <ToDo key={what.id} name={what.name}/>
-      ))}
+class App extends React.Component{
+  state={
+    count: 0
+  };
+  add = ()=>{
+    this.setState(current=>({count: current.count+1}));
+  };
+  minus = ()=>{
+    this.setState(current=>({count: current.count-1}));
+  };
+  render() {
+    return (
+    <div>
+      <h1>The number is: {this.state.count}</h1>
+      <button onClick={this.add}>Add</button>
+      <button onClick={this.minus}>minus</button>
     </div>
-  );
+    );
+  }
 }
 
 export default App;
