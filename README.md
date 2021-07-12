@@ -1,7 +1,6 @@
 # Movie App 2021
 
-## 박병준의 React JS 도전기
-[myVelog_ReactJS](https://velog.io/@pjoon357/series/ReactJs)
+## 박병준의 React JS 도전기 [myVelog_ReactJS](https://velog.io/@pjoon357/series/ReactJs)
 
 1. 1일차 react 생성
 2. 2일차 JSX & props& & Js map사용법
